@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <body style="margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#111;">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi servidor de Discord</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1d2b, #0f1117);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(20, 22, 30, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #303133;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background: #5865F2;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #4752c4;
+      transform: scale(1.05);
+    }
+
+    iframe {
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- FOTO DE PERFIL -->
+    <img class="avatar" src="https://cdn.discordapp.com/avatars/1477082500621799436/a_15b5e79c5f734d09c1e94d786110ba9b.webp?size=240" alt="avatar">
+
+    <!-- TITULO -->
+    <h1>Red</h1>
+
+    <!-- DESCRIPCION -->
+    <p>Servidor de Red</p>
+
+
+    <!-- WIDGET -->
     <iframe src="https://discord.com/widget?id=1480226424198533327&theme=dark"
       width="350"
       height="500"
       allowtransparency="true"
       frameborder="0">
     </iframe>
-  </body>
+
+  </div>
+
+</body>
 </html>
