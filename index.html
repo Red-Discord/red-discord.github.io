@@ -24,6 +24,7 @@
       box-shadow: 0 0 30px rgba(0,0,0,0.6);
       backdrop-filter: blur(10px);
       animation: fadeIn 1s ease;
+      max-width: 380px;
     }
 
     @keyframes fadeIn {
@@ -50,21 +51,38 @@
       margin-bottom: 15px;
     }
 
-    .btn {
-      background: #5865F2;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
+    /* BOTÓN NUEVO */
+    .github-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6e7bff, #5865F2);
+      padding: 12px 22px;
+      border-radius: 10px;
       color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: 0.2s;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 15px 0;
+      transition: 0.25s;
+      box-shadow: 0 0 15px rgba(88,101,242,0.4);
     }
 
-    .btn:hover {
-      background: #4752c4;
-      transform: scale(1.05);
+    .github-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(88,101,242,0.8);
+      background: linear-gradient(135deg, #5865F2, #4752c4);
+    }
+
+    /* IMAGEN PREVIEW */
+    .preview-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
+
+    .preview-img:hover {
+      transform: scale(1.02);
     }
 
     iframe {
@@ -87,6 +105,13 @@
     <!-- DESCRIPCION -->
     <p>Servidor de Red</p>
 
+    <!-- IMAGEN DEL PROYECTO -->
+    <img class="preview-img" src="https://opengraph.githubassets.com/1/keyboard-sounds/keyboardsounds-pro" alt="Keyboard Sounds Preview">
+
+    <!-- BOTÓN A GITHUB -->
+    <a class="github-btn" href="https://github.com/keyboard-sounds/keyboardsounds-pro" target="_blank">
+      Ver proyecto en GitHub
+    </a>
 
     <!-- WIDGET -->
     <iframe src="https://discord.com/widget?id=1480226424198533327&theme=dark"
