@@ -1,127 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi servidor de Discord</title>
+  <meta charset="UTF-8">
+  <title>Mi servidor de Discord</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1a1d2b, #0f1117);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1d2b, #0f1117);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-    .card {
-      background: rgba(20, 22, 30, 0.9);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1s ease;
-      max-width: 380px;
-    }
+    .card {
+      background: rgba(20, 22, 30, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease;
+      max-width: 380px;
+    }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
 
-    .avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 3px solid #303133;
-      margin-bottom: 10px;
-    }
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #303133;
+      margin-bottom: 10px;
+    }
 
-    h1 {
-      margin: 10px 0 5px;
-      font-size: 22px;
-    }
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 22px;
+    }
 
-    p {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 15px;
-    }
+    p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
 
-    /* BOTÓN NUEVO */
-    .github-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #6e7bff, #5865F2);
-      padding: 12px 22px;
-      border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-      margin: 15px 0;
-      transition: 0.25s;
-      box-shadow: 0 0 15px rgba(88,101,242,0.4);
-    }
+    /* BOTÓN NUEVO */
+    .github-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6e7bff, #5865F2);
+      padding: 12px 22px;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 15px 0;
+      transition: 0.25s;
+      box-shadow: 0 0 15px rgba(88,101,242,0.4);
+    }
 
-    .github-btn:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px rgba(88,101,242,0.8);
-      background: linear-gradient(135deg, #5865F2, #4752c4);
-    }
+    .github-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(88,101,242,0.8);
+      background: linear-gradient(135deg, #5865F2, #4752c4);
+    }
 
-    /* IMAGEN PREVIEW */
-    .preview-img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 15px 0;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      transition: 0.3s;
-    }
+    /* IMAGEN PREVIEW */
+    .preview-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
 
-    .preview-img:hover {
-      transform: scale(1.02);
-    }
+    .preview-img:hover {
+      transform: scale(1.02);
+    }
 
-    iframe {
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-  </style>
+    iframe {
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="card">
+  <div class="card">
 
-    <!-- FOTO DE PERFIL -->
-    <img class="avatar" src="https://cdn.discordapp.com/avatars/1477082500621799436/a_15b5e79c5f734d09c1e94d786110ba9b.webp?size=240" alt="avatar">
+        <img class="avatar" src="https://cdn.discordapp.com/avatars/1477082500621799436/a_15b5e79c5f734d09c1e94d786110ba9b.webp?size=240" alt="avatar">
 
-    <!-- TITULO -->
-    <h1>Red</h1>
+        <h1>Red</h1>
 
-    <!-- DESCRIPCION -->
-    <p>Servidor de Red</p>
+        <p>Servidor de Red</p>
 
-    <!-- IMAGEN DEL PROYECTO -->
-    <img class="preview-img" src="https://opengraph.githubassets.com/1/keyboard-sounds/keyboardsounds-pro" alt="Keyboard Sounds Preview">
+        <img class="preview-img" src="https://github.com/keyboard-sounds/keyboardsounds-pro/raw/main/images/preview.png" alt="Keyboard Sounds Preview">
 
-    <!-- BOTÓN A GITHUB -->
-    <a class="github-btn" href="https://github.com/keyboard-sounds/keyboardsounds-pro" target="_blank">
-      Ver proyecto en GitHub
-    </a>
+        <a class="github-btn" href="https://github.com/keyboard-sounds/keyboardsounds-pro" target="_blank">
+      Ver proyecto en GitHub
+    </a>
 
-    <!-- WIDGET -->
-    <iframe src="https://discord.com/widget?id=1480226424198533327&theme=dark"
-      width="350"
-      height="500"
-      allowtransparency="true"
-      frameborder="0">
-    </iframe>
+        <iframe src="https://discord.com/widget?id=1480226424198533327&theme=dark"
+      width="350"
+      height="500"
+      allowtransparency="true"
+      frameborder="0">
+    </iframe>
 
-  </div>
+   </div>
 
 </body>
 </html>
