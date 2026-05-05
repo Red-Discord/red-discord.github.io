@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAC • Servidor Survival • Red MAC Modpack</title>
-    <meta name="description" content="Servidor Survival con el mejor modpack personalizado. Red MAC v26.1.2 en Modrinth. Comunidad pequeña, shaders, animaciones y experiencia premium.">
+    <meta name="description" content="Servidor Survival premium con el modpack Red MAC v26.1.2. Shaders, animaciones, rendimiento y comunidad de confianza.">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3WBMMBG1L"></script>
@@ -18,16 +18,11 @@
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9682722347178711" crossorigin="anonymous"></script>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        :root {
-            --primary: #fe2858;
-        }
         
         body {
             font-family: 'Inter', system_ui, sans-serif;
@@ -35,11 +30,14 @@
         
         .minecraft-font {
             font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .hero-bg {
-            background: radial-gradient(circle at 50% 20%, #fe2858 0%, #0f1117 70%);
+            background: linear-gradient(rgba(15, 17, 23, 0.65), rgba(15, 17, 23, 0.75)), url('https://picsum.photos/id/1016/2000/1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .section {
@@ -47,54 +45,29 @@
         }
 
         .minecraft-card {
-            background: rgba(20, 22, 30, 0.95);
-            border: 1px solid rgba(254, 40, 88, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #14161e;
+            border: 1px solid rgba(254, 40, 88, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .minecraft-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .nav-active {
-            color: #fe2858;
-            position: relative;
-        }
-        
-        .nav-active:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, #fe2858, #ff5e8a);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            border-color: rgba(254, 40, 88, 0.25);
         }
 
         .feature-icon {
-            width: 52px;
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
+            width: 56px;
+            height: 56px;
             background: rgba(254, 40, 88, 0.1);
-            border-radius: 14px;
             color: #fe2858;
-        }
-
-        .stat-value {
-            font-size: 2.25rem;
-            line-height: 1;
-            font-weight: 800;
-            color: #fe2858;
+            border-radius: 16px;
         }
 
         .modpack-badge {
             background: linear-gradient(90deg, #fe2858, #ff5e8a);
             color: white;
-            padding: 4px 16px;
+            padding: 4px 18px;
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 700;
@@ -102,73 +75,68 @@
         }
 
         .ad-container {
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            padding: 8px;
-            margin: 20px 0;
+            background: rgba(255,255,255,0.025);
+            border-radius: 16px;
+            padding: 12px;
         }
 
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #22c55e;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 9999px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            z-index: 99999;
-            animation: toast-pop 0.3s ease forwards;
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #fe2858;
         }
 
-        @keyframes toast-pop {
-            from { transform: translate(-50%, 30px); opacity: 0; }
-            to { transform: translate(-50%, 0); opacity: 1; }
+        .gallery-img {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+            border: 3px solid #14161e;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.04) rotate(0.5deg);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
 
-        .minecraft-grid {
-            background-image: 
-                linear-gradient(rgba(254,40,88,0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(254,40,88,0.06) 1px, transparent 1px);
-            background-size: 40px 40px;
+        .stat-value {
+            font-size: 2.5rem;
+            line-height: 1;
+            font-weight: 800;
+            color: #fe2858;
         }
     </style>
 </head>
 <body class="bg-[#0f1117] text-white">
 
     <!-- NAVBAR -->
-    <nav class="bg-[#0a0c12] border-b border-white/10 sticky top-0 z-50">
+    <nav class="bg-[#0a0c12]/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-x-3">
-                    <img src="https://i.ibb.co/4n1Ypjnb/MAC-Con-fondo-100-X100.png" alt="MAC Logo" class="w-11 h-11 rounded-xl ring-2 ring-[#fe2858]/30">
+                    <img src="https://i.ibb.co/4n1Ypjnb/MAC-Con-fondo-100-X100.png" alt="MAC Logo" class="w-12 h-12 rounded-2xl ring-2 ring-[#fe2858]/30">
                     <div>
-                        <span class="font-bold text-3xl tracking-tighter">MAC</span>
-                        <span class="text-[#fe2858] text-sm font-bold tracking-[3px] block -mt-1">SURVIVAL</span>
+                        <span class="font-bold text-4xl tracking-tighter">MAC</span>
+                        <span class="text-[#fe2858] text-xs font-black tracking-[4px] block -mt-1.5">SURVIVAL</span>
                     </div>
                 </div>
                 
-                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                    <a href="#sobre" class="hover:text-[#fe2858] transition-colors">El Servidor</a>
-                    <a href="#modpack" class="hover:text-[#fe2858] transition-colors">Red MAC Modpack</a>
-                    <a href="#como-unirte" class="hover:text-[#fe2858] transition-colors">Cómo Unirte</a>
-                    <a href="https://discord.com/invite/VCX8qkV3" target="_blank" class="hover:text-[#fe2858] transition-colors">Discord</a>
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-semibold">
+                    <a href="#sobre" class="nav-link">El Servidor</a>
+                    <a href="#modpack" class="nav-link">Red MAC Modpack</a>
+                    <a href="#galeria" class="nav-link">El Mundo</a>
+                    <a href="#como-unirte" class="nav-link">Cómo Unirte</a>
                 </div>
 
                 <div class="flex items-center gap-x-3">
                     <a href="https://discord.com/invite/VCX8qkV3" target="_blank"
-                       class="hidden sm:flex items-center gap-x-2 px-5 py-2.5 rounded-2xl bg-white/5 hover:bg-white/10 text-sm font-semibold transition-all active:scale-[0.985]">
-                        <i class="fab fa-discord"></i>
+                       class="hidden sm:flex items-center gap-x-2.5 px-5 py-2.5 rounded-2xl bg-white/5 hover:bg-white/10 text-sm font-semibold transition-all">
+                        <i class="fab fa-discord text-xl"></i>
                         <span>Discord</span>
                     </a>
                     
                     <button onclick="copyServerIP()"
-                            class="flex items-center gap-x-2 px-6 py-2.5 rounded-2xl bg-[#fe2858] hover:bg-[#e01e4a] font-bold text-sm active:scale-[0.985] transition-all shadow-lg shadow-[#fe2858]/30">
+                            class="flex items-center gap-x-2.5 px-7 py-3 rounded-2xl bg-[#fe2858] hover:bg-[#e01e4a] font-bold text-sm active:scale-[0.985] transition-all shadow-lg shadow-[#fe2858]/40">
                         <i class="fas fa-copy"></i>
                         <span>Copiar IP</span>
                     </button>
@@ -178,96 +146,82 @@
     </nav>
 
     <!-- HERO -->
-    <header class="hero-bg pt-16 pb-20 px-6">
+    <header class="hero-bg min-h-[92vh] flex items-center pt-10 pb-16 px-6 relative">
         <div class="max-w-screen-xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full text-sm mb-6 border border-white/20">
+                    <div class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="font-medium">Servidor online 24/7 • Comunidad de confianza</span>
+                </div>
                 
-                <!-- Texto -->
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm mb-6 border border-white/10">
-                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                        <span class="font-medium">Servidor online 24/7 • 12 jugadores activos</span>
-                    </div>
+                <h1 class="text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-4">
+                    MAC<br>
+                    <span class="bg-gradient-to-r from-white via-white to-[#fe2858] bg-clip-text text-transparent">Survival</span>
+                </h1>
+                
+                <p class="text-2xl text-white/90 mb-9 max-w-lg">El mejor modpack personalizado. Shaders, animaciones y diversión real.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="copyServerIP()" 
+                            class="group flex items-center justify-center gap-x-3 bg-[#fe2858] hover:bg-[#e01e4a] transition-all px-10 py-5 rounded-3xl font-extrabold text-2xl active:scale-[0.985] shadow-2xl shadow-[#fe2858]/50">
+                        <i class="fas fa-copy text-3xl"></i>
+                        <span>COPIAR IP DEL SERVIDOR</span>
+                    </button>
                     
-                    <h1 class="text-6xl lg:text-7xl font-bold tracking-tighter leading-none mb-4">
-                        MAC<br>
-                        <span class="bg-gradient-to-r from-white to-[#fe2858] bg-clip-text text-transparent">Survival</span>
-                    </h1>
-                    
-                    <p class="text-2xl text-white/80 mb-8 max-w-lg mx-auto lg:mx-0">
-                        Jugar • Reír • Disfrutar • Repetir
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <button onclick="copyServerIP()" 
-                                class="group flex items-center justify-center gap-x-3 bg-[#fe2858] hover:bg-[#e01e4a] transition-all px-9 py-4 rounded-3xl font-bold text-xl active:scale-[0.985] shadow-xl shadow-[#fe2858]/40">
-                            <i class="fas fa-copy text-xl"></i>
-                            <span>COPIAR IP DEL SERVIDOR</span>
-                        </button>
-                        
-                        <a href="https://discord.com/invite/VCX8qkV3" target="_blank"
-                           class="flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 transition-all px-8 py-4 rounded-3xl font-semibold text-lg">
-                            <i class="fab fa-discord text-2xl"></i>
-                            <span>Entrar al Discord</span>
-                        </a>
-                    </div>
-                    
-                    <p class="mt-5 text-sm text-white/50">IP: <span class="font-mono text-[#fe2858]">mac.axenthost.me</span> • Versión 1.21+</p>
+                    <a href="https://discord.com/invite/VCX8qkV3" target="_blank"
+                       class="flex items-center justify-center gap-x-3 border-2 border-white/40 hover:bg-white/10 transition-all px-9 py-5 rounded-3xl font-bold text-xl">
+                        <i class="fab fa-discord text-3xl"></i>
+                        <span>Entrar al Discord</span>
+                    </a>
                 </div>
-
-                <!-- Imagen / Avatar grande -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative">
-                        <img src="https://i.ibb.co/4n1Ypjnb/MAC-Con-fondo-100-X100.png" 
-                             alt="MAC Logo" 
-                             class="w-64 h-64 lg:w-80 lg:h-80 rounded-3xl ring-8 ring-[#fe2858]/20 shadow-2xl">
-                        <div class="absolute -bottom-3 -right-3 bg-[#0f1117] px-5 py-2 rounded-2xl border border-white/10 text-sm font-semibold flex items-center gap-x-2">
-                            <i class="fas fa-globe text-emerald-400"></i>
-                            <span>Online</span>
-                        </div>
-                    </div>
-                </div>
+                
+                <p class="mt-6 text-white/60 text-sm">IP: <span class="font-mono text-[#fe2858] font-semibold">mac.axenthost.me</span> • Versión 1.21+</p>
+            </div>
+        </div>
+        
+        <!-- Badge flotante -->
+        <div class="absolute bottom-10 right-10 hidden lg:block">
+            <div class="bg-[#14161e] px-6 py-3 rounded-2xl border border-white/10 flex items-center gap-x-3 text-sm">
+                <i class="fas fa-globe text-emerald-400"></i>
+                <span class="font-semibold">12 jugadores conectados ahora</span>
             </div>
         </div>
     </header>
 
-    <!-- STATS RÁPIDAS -->
-    <div class="max-w-screen-xl mx-auto px-6 -mt-8 relative z-10">
+    <!-- STATS -->
+    <div class="max-w-screen-xl mx-auto px-6 -mt-10 relative z-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="minecraft-card rounded-3xl p-6 text-center">
+            <div class="minecraft-card rounded-3xl p-7 text-center">
                 <div class="stat-value">12</div>
-                <div class="text-white/60 text-sm mt-1">Jugadores conectados</div>
+                <div class="text-white/60 mt-1 text-sm">Jugadores conectados</div>
             </div>
-            <div class="minecraft-card rounded-3xl p-6 text-center">
-                <div class="stat-value">37%</div>
-                <div class="text-white/60 text-sm mt-1">Progreso del mapa</div>
-            </div>
-            <div class="minecraft-card rounded-3xl p-6 text-center">
+            <div class="minecraft-card rounded-3xl p-7 text-center">
                 <div class="stat-value">24/7</div>
-                <div class="text-white/60 text-sm mt-1">Servidor siempre activo</div>
+                <div class="text-white/60 mt-1 text-sm">Servidor siempre activo</div>
             </div>
-            <div class="minecraft-card rounded-3xl p-6 text-center">
+            <div class="minecraft-card rounded-3xl p-7 text-center">
                 <div class="stat-value">v26.1.2</div>
-                <div class="text-white/60 text-sm mt-1">Red MAC Modpack</div>
+                <div class="text-white/60 mt-1 text-sm">Red MAC Modpack</div>
+            </div>
+            <div class="minecraft-card rounded-3xl p-7 text-center">
+                <div class="stat-value">100%</div>
+                <div class="text-white/60 mt-1 text-sm">Comunidad de confianza</div>
             </div>
         </div>
     </div>
 
     <!-- SOBRE EL SERVIDOR -->
     <section id="sobre" class="max-w-screen-xl mx-auto px-6 pt-20 pb-12">
-        <div class="text-center mb-10">
-            <span class="modpack-badge">COMUNIDAD PEQUEÑA Y DE CONFIANZA</span>
-            <h2 class="text-5xl font-bold tracking-tighter mt-3">Un Survival diferente</h2>
-        </div>
-        
-        <div class="max-w-3xl mx-auto text-center text-lg text-white/70">
-            <p>MAC es un servidor <strong>Survival con alma</strong>. Comunidad reducida, cero toxicidad y un modpack creado específicamente para que la experiencia sea bonita, fluida y divertida desde el primer minuto.</p>
+        <div class="max-w-2xl mx-auto text-center">
+            <span class="modpack-badge">COMUNIDAD PEQUEÑA Y UNIDA</span>
+            <h2 class="text-6xl font-black tracking-tighter mt-4 mb-6">Un Survival con alma</h2>
+            <p class="text-xl text-white/75">MAC es un servidor privado donde la gente se conoce, se ayuda y se divierte. Sin toxicidad. Sin griefers. Solo buena gente y buena experiencia.</p>
         </div>
     </section>
 
-    <!-- ANUNCIO HORIZONTAL 1 -->
+    <!-- ANUNCIO HORIZONTAL -->
     <div class="max-w-screen-xl mx-auto px-6">
-        <div class="ad-container">
+        <div class="ad-container mb-8">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9682722347178711"
                     crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
@@ -281,139 +235,120 @@
     </div>
 
     <!-- MODPACK RED MAC -->
-    <section id="modpack" class="max-w-screen-xl mx-auto px-6 py-16">
+    <section id="modpack" class="max-w-screen-xl mx-auto px-6 py-12">
         <div class="minecraft-card rounded-3xl p-10 lg:p-14">
-            <div class="flex flex-col lg:flex-row gap-10 items-center">
-                
-                <div class="flex-1">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
                     <div class="flex items-center gap-x-3 mb-4">
-                        <span class="modpack-badge">NUEVO</span>
-                        <span class="text-sm font-semibold text-white/50">v26.1.2 • 1.21+</span>
+                        <span class="modpack-badge">MODPACK OFICIAL</span>
+                        <span class="text-sm text-white/50 font-medium">v26.1.2 • 1.21+</span>
                     </div>
                     
-                    <h2 class="text-5xl font-bold tracking-tighter mb-4">Red MAC Modpack</h2>
-                    <p class="text-xl text-white/80 mb-6">El modpack oficial creado para MAC. Más de 50 mods que mejoran visualmente, añaden animaciones, mejoran el rendimiento y hacen la experiencia mucho más inmersiva.</p>
+                    <h2 class="text-6xl font-black tracking-tighter mb-5">Red MAC Modpack</h2>
+                    <p class="text-xl text-white/80 mb-8">Más de 50 mods creados y seleccionados especialmente para que tu experiencia sea preciosa, fluida y divertida desde el minuto uno.</p>
                     
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="bg-white/5 px-4 py-1.5 rounded-2xl text-sm flex items-center gap-x-2">
+                        <div class="bg-white/5 px-5 py-2 rounded-2xl text-sm flex items-center gap-x-2">
                             <i class="fas fa-palette text-[#fe2858]"></i>
-                            <span>Shaders + Iris + Solas</span>
+                            <span>Iris + Solas Shaders</span>
                         </div>
-                        <div class="bg-white/5 px-4 py-1.5 rounded-2xl text-sm flex items-center gap-x-2">
+                        <div class="bg-white/5 px-5 py-2 rounded-2xl text-sm flex items-center gap-x-2">
                             <i class="fas fa-magic text-[#fe2858]"></i>
                             <span>Fresh Animations</span>
                         </div>
-                        <div class="bg-white/5 px-4 py-1.5 rounded-2xl text-sm flex items-center gap-x-2">
+                        <div class="bg-white/5 px-5 py-2 rounded-2xl text-sm flex items-center gap-x-2">
                             <i class="fas fa-tachometer-alt text-[#fe2858]"></i>
                             <span>Sodium + Performance</span>
-                        </div>
-                        <div class="bg-white/5 px-4 py-1.5 rounded-2xl text-sm flex items-center gap-x-2">
-                            <i class="fas fa-mouse text-[#fe2858]"></i>
-                            <span>Mouse Tweaks + Zoomify</span>
                         </div>
                     </div>
                     
                     <a href="https://modrinth.com/modpack/red-mac" target="_blank"
-                       class="inline-flex items-center gap-x-3 bg-white text-black font-bold px-8 py-4 rounded-3xl hover:bg-white/90 active:scale-[0.985] transition-all">
+                       class="inline-flex items-center gap-x-3 bg-white text-black font-extrabold px-9 py-4 rounded-3xl hover:bg-white/90 active:scale-[0.985] text-lg">
                         <i class="fas fa-download"></i>
                         <span>Descargar en Modrinth</span>
                     </a>
                 </div>
                 
-                <div class="flex-1 bg-black/30 rounded-3xl p-8 text-sm">
-                    <h4 class="font-semibold mb-4 flex items-center gap-x-2">
+                <div class="lg:col-span-5 bg-black/40 rounded-3xl p-8">
+                    <h4 class="font-bold mb-5 flex items-center gap-x-2 text-lg">
                         <i class="fas fa-list-check text-[#fe2858]"></i> 
-                        Lo más destacado del modpack
+                        Lo más destacado
                     </h4>
-                    <ul class="space-y-2 text-white/80">
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> Shaders espectaculares (Iris + Solas Shader)</li>
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> Animaciones fluidas y realistas (Fresh Animations)</li>
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> Rendimiento brutal con Sodium</li>
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> Interfaz moderna y oscura</li>
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> QOL: Mouse Tweaks, Zoom, Crosshair, etc.</li>
-                        <li class="flex gap-x-2"><span class="text-[#fe2858]">•</span> Sonido mejorado + física realista</li>
+                    <ul class="space-y-3 text-white/85">
+                        <li class="flex gap-x-3"><span class="text-[#fe2858] mt-1">•</span> Shaders espectaculares con Iris + Solas</li>
+                        <li class="flex gap-x-3"><span class="text-[#fe2858] mt-1">•</span> Animaciones fluidas y realistas</li>
+                        <li class="flex gap-x-3"><span class="text-[#fe2858] mt-1">•</span> Rendimiento brutal (Sodium)</li>
+                        <li class="flex gap-x-3"><span class="text-[#fe2858] mt-1">•</span> Interfaz moderna y oscura</li>
+                        <li class="flex gap-x-3"><span class="text-[#fe2858] mt-1">•</span> QOL completo: Mouse Tweaks, Zoomify, etc.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
-    <section class="max-w-screen-xl mx-auto px-6 pb-16">
+    <!-- GALERÍA / EL MUNDO DE MAC -->
+    <section id="galeria" class="max-w-screen-xl mx-auto px-6 py-16">
         <div class="text-center mb-10">
-            <h2 class="text-4xl font-bold tracking-tighter">¿Por qué jugar en MAC?</h2>
+            <span class="modpack-badge">CAPTURAS REALES</span>
+            <h2 class="text-5xl font-black tracking-tighter mt-3">Así se ve jugar en MAC</h2>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="minecraft-card rounded-3xl p-7">
-                <div class="feature-icon mb-5"><i class="fas fa-users"></i></div>
-                <h3 class="font-semibold text-xl mb-2">Comunidad pequeña y unida</h3>
-                <p class="text-white/70">Solo gente respetuosa. Sin griefers ni toxicidad. Aquí nos conocemos y nos ayudamos.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Imagen 1 -->
+            <div class="overflow-hidden rounded-3xl aspect-video">
+                <img src="https://picsum.photos/id/1016/800/600" alt="Paisaje Minecraft al atardecer" 
+                     class="w-full h-full object-cover gallery-img">
             </div>
-            
-            <div class="minecraft-card rounded-3xl p-7">
-                <div class="feature-icon mb-5"><i class="fas fa-palette"></i></div>
-                <h3 class="font-semibold text-xl mb-2">Visuales espectaculares</h3>
-                <p class="text-white/70">El modpack Red MAC convierte tu Minecraft en algo completamente nuevo y precioso.</p>
+            <!-- Imagen 2 -->
+            <div class="overflow-hidden rounded-3xl aspect-video">
+                <img src="https://picsum.photos/id/1005/800/600" alt="Jugador en armadura de diamante" 
+                     class="w-full h-full object-cover gallery-img">
             </div>
-            
-            <div class="minecraft-card rounded-3xl p-7">
-                <div class="feature-icon mb-5"><i class="fas fa-shield-alt"></i></div>
-                <h3 class="font-semibold text-xl mb-2">Entorno seguro y confiable</h3>
-                <p class="text-white/70">Servidor privado con whitelist. Solo entran personas que respetan las normas.</p>
+            <!-- Imagen 3 -->
+            <div class="overflow-hidden rounded-3xl aspect-video">
+                <img src="https://picsum.photos/id/160/800/600" alt="Entorno con shaders" 
+                     class="w-full h-full object-cover gallery-img">
+            </div>
+            <!-- Imagen 4 -->
+            <div class="overflow-hidden rounded-3xl aspect-video">
+                <img src="https://picsum.photos/id/251/800/600" alt="Paisaje Minecraft hermoso" 
+                     class="w-full h-full object-cover gallery-img">
             </div>
         </div>
+        
+        <p class="text-center text-white/50 text-sm mt-6">Imágenes de ejemplo • En el servidor se ve aún mejor con el modpack</p>
     </section>
-
-    <!-- ANUNCIO CUADRADO -->
-    <div class="max-w-screen-xl mx-auto px-6">
-        <div class="ad-container max-w-[320px] mx-auto">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9682722347178711"
-                    crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9682722347178711"
-                 data-ad-slot="8889914855"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-    </div>
 
     <!-- CÓMO UNIRTE -->
     <section id="como-unirte" class="max-w-screen-xl mx-auto px-6 py-16">
         <div class="text-center mb-10">
             <span class="modpack-badge">MUY FÁCIL</span>
-            <h2 class="text-5xl font-bold tracking-tighter mt-3">¿Cómo entrar al servidor?</h2>
+            <h2 class="text-6xl font-black tracking-tighter mt-3">¿Cómo entrar?</h2>
         </div>
         
-        <div class="max-w-xl mx-auto">
-            <div class="minecraft-card rounded-3xl p-9 text-center">
+        <div class="max-w-2xl mx-auto">
+            <div class="minecraft-card rounded-3xl p-10 text-center">
                 <button onclick="copyServerIP()" 
-                        class="w-full flex items-center justify-center gap-x-4 bg-[#fe2858] hover:bg-[#e01e4a] py-6 rounded-3xl font-extrabold text-2xl active:scale-[0.985] transition-all shadow-xl">
-                    <i class="fas fa-copy text-3xl"></i>
+                        class="w-full flex items-center justify-center gap-x-4 bg-[#fe2858] hover:bg-[#e01e4a] py-7 rounded-3xl font-extrabold text-3xl active:scale-[0.985] transition-all shadow-xl mb-8">
+                    <i class="fas fa-copy text-4xl"></i>
                     <span>COPIAR IP: mac.axenthost.me</span>
                 </button>
                 
-                <div class="mt-8 text-left space-y-5 text-sm">
+                <div class="text-left max-w-md mx-auto space-y-5 text-[15px]">
                     <div class="flex gap-4">
-                        <div class="w-7 h-7 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-xs font-bold">1</div>
-                        <div><strong>Copia la IP</strong> con el botón de arriba</div>
+                        <div class="w-8 h-8 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-sm font-bold">1</div>
+                        <div>Copia la IP con el botón de arriba</div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="w-7 h-7 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-xs font-bold">2</div>
-                        <div>Abre tu <strong>launcher</strong> (Minecraft oficial, CurseForge o Modrinth)</div>
+                        <div class="w-8 h-8 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-sm font-bold">2</div>
+                        <div>Abre tu launcher (Minecraft, CurseForge o Modrinth)</div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="w-7 h-7 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-xs font-bold">3</div>
-                        <div>Ve a <strong>Multijugador → Añadir servidor</strong></div>
+                        <div class="w-8 h-8 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-sm font-bold">3</div>
+                        <div>Multijugador → Añadir servidor → Pega la IP</div>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="w-7 h-7 flex-shrink-0 rounded-full bg-[#fe2858] flex items-center justify-center text-xs font-bold">4</div>
-                        <div>Pega la IP y pulsa <strong>"Hecho"</strong></div>
-                    </div>
-                    <div class="flex gap-4 pt-2">
-                        <div class="w-7 h-7 flex-shrink-0 rounded-full bg-emerald-500 flex items-center justify-center text-xs font-bold">5</div>
+                    <div class="flex gap-4 pt-1">
+                        <div class="w-8 h-8 flex-shrink-0 rounded-full bg-emerald-500 flex items-center justify-center text-sm font-bold">4</div>
                         <div class="font-semibold text-emerald-400">¡Conéctate y disfruta!</div>
                     </div>
                 </div>
@@ -422,7 +357,7 @@
     </section>
 
     <!-- ANUNCIO MULTIPLEX -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-10">
+    <div class="max-w-screen-xl mx-auto px-6 pb-8">
         <div class="ad-container">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9682722347178711"
                     crossorigin="anonymous"></script>
@@ -435,123 +370,92 @@
         </div>
     </div>
 
-    <!-- COMUNIDAD + DISCORD -->
-    <section class="max-w-screen-xl mx-auto px-6 pb-16">
-        <div class="minecraft-card rounded-3xl p-10 lg:p-14 text-center">
-            <h2 class="text-4xl font-bold tracking-tighter mb-3">Únete a nuestra comunidad</h2>
-            <p class="text-white/70 mb-8 max-w-md mx-auto">En el Discord hablamos, organizamos eventos y resolvemos dudas. Es el corazón del servidor.</p>
+    <!-- DISCORD -->
+    <section class="max-w-screen-xl mx-auto px-6 pb-20">
+        <div class="minecraft-card rounded-3xl p-12 text-center">
+            <h2 class="text-5xl font-black tracking-tighter mb-4">Únete a la comunidad</h2>
+            <p class="text-white/70 mb-8 max-w-md mx-auto">En el Discord hablamos, organizamos eventos y resolvemos dudas. Es donde está el corazón del servidor.</p>
             
             <a href="https://discord.com/invite/VCX8qkV3" target="_blank"
-               class="inline-flex items-center gap-x-3 bg-[#5865f2] hover:bg-[#4752c4] px-10 py-4 rounded-3xl font-bold text-lg active:scale-[0.985]">
-                <i class="fab fa-discord text-2xl"></i>
+               class="inline-flex items-center gap-x-3 bg-[#5865f2] hover:bg-[#4752c4] px-10 py-4 rounded-3xl font-extrabold text-xl active:scale-[0.985]">
+                <i class="fab fa-discord text-3xl"></i>
                 <span>Entrar al Discord de MAC</span>
             </a>
             
-            <div class="mt-10">
+            <div class="mt-10 max-w-[420px] mx-auto">
                 <iframe src="https://discord.com/widget?id=1480226424198533327&amp;theme=dark" 
-                        width="100%" height="320" allowtransparency="true" frameborder="0" 
-                        class="rounded-2xl max-w-[420px] mx-auto"></iframe>
+                        width="100%" height="300" allowtransparency="true" frameborder="0" 
+                        class="rounded-2xl"></iframe>
             </div>
-        </div>
-    </section>
-
-    <!-- APOYO + ANUNCIO -->
-    <section class="max-w-screen-xl mx-auto px-6 pb-20">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold tracking-tighter">¿Quieres ayudar a que el servidor siga creciendo?</h2>
-            <p class="text-white/60 mt-2">Tu apoyo (y ver anuncios) nos ayuda a mantenerlo online y mejorarlo.</p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://buymeacoffee.com/m.a.c" target="_blank"
-               class="flex items-center justify-center gap-x-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-extrabold px-9 py-4 rounded-3xl active:scale-[0.985]">
-                <i class="fas fa-coffee"></i>
-                <span>Apoyar con Buy Me a Coffee</span>
-            </a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="bg-[#0a0c12] border-t border-white/10 py-10 px-6">
         <div class="max-w-screen-xl mx-auto text-center text-sm text-white/50">
-            <p>MAC Survival • Comunidad de confianza desde 2025</p>
+            <p>MAC Survival • Comunidad de confianza • 2025-2026</p>
             <p class="mt-1">Hecho con ❤️ para nuestra pequeña familia gamer</p>
         </div>
     </footer>
 
-    <!-- TOAST / Notificación -->
-    <div id="toast" class="hidden toast">
-        <i class="fas fa-check-circle text-xl"></i>
+    <!-- TOAST -->
+    <div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-8 py-4 rounded-3xl flex items-center gap-x-3 font-semibold shadow-2xl z-[999]">
+        <i class="fas fa-check-circle text-2xl"></i>
         <span id="toast-text">¡IP copiada al portapapeles!</span>
     </div>
 
     <script>
-        // Tailwind script
         function initializeTailwind() {
-            document.documentElement.style.setProperty('--accent', '#fe2858');
+            // Tailwind ya está cargado vía CDN
         }
         
-        // Copiar IP del servidor
         function copyServerIP() {
             const ip = "mac.axenthost.me";
             
             navigator.clipboard.writeText(ip).then(() => {
-                showToast("¡IP copiada correctamente!");
+                const toast = document.getElementById('toast');
+                toast.style.display = 'flex';
+                toast.classList.remove('hidden');
                 
-                // Efecto visual en botones
-                const buttons = document.querySelectorAll('button');
-                buttons.forEach(btn => {
+                // Efecto en todos los botones de copiar
+                document.querySelectorAll('button').forEach(btn => {
                     if (btn.innerText.includes('COPIAR') || btn.innerText.includes('IP')) {
-                        const originalText = btn.innerHTML;
-                        btn.innerHTML = `<i class="fas fa-check"></i> <span>¡COPIADO!</span>`;
+                        const original = btn.innerHTML;
+                        btn.innerHTML = `<i class="fas fa-check text-2xl"></i> <span>¡COPIADO!</span>`;
                         btn.style.background = '#22c55e';
                         
                         setTimeout(() => {
-                            btn.innerHTML = originalText;
+                            btn.innerHTML = original;
                             btn.style.background = '#fe2858';
                         }, 2200);
                     }
                 });
+                
+                setTimeout(() => {
+                    toast.style.transition = 'all 0.4s ease';
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transition = '';
+                        toast.style.display = 'none';
+                    }, 300);
+                }, 2600);
             }).catch(() => {
-                // Fallback si no funciona el clipboard
-                prompt("Copia manualmente esta IP:", ip);
+                prompt("Copia esta IP manualmente:", ip);
             });
         }
         
-        // Mostrar toast bonito
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const text = document.getElementById('toast-text');
-            
-            text.textContent = message;
-            toast.style.display = 'flex';
-            toast.classList.remove('hidden');
-            
-            setTimeout(() => {
-                toast.style.transition = 'all 0.4s ease';
-                toast.style.opacity = '0';
-                
-                setTimeout(() => {
-                    toast.style.opacity = '1';
-                    toast.style.transition = '';
-                    toast.style.display = 'none';
-                }, 400);
-            }, 2800);
-        }
-        
-        // Inicializar todo
         function init() {
             initializeTailwind();
             
-            // Mensaje en consola para el admin
-            console.log('%c[MAC] Página cargada. IP del servidor: mac.axenthost.me', 'color:#fe2858; font-size:10px');
-            
-            // Easter egg: click en el logo copia la IP
+            // Click en el logo también copia la IP
             const logo = document.querySelector('img[alt="MAC Logo"]');
             if (logo) {
                 logo.style.cursor = 'pointer';
                 logo.addEventListener('click', copyServerIP);
             }
+            
+            console.log('%c[MAC] Página mejorada cargada correctamente', 'color:#fe2858');
         }
         
         window.onload = init;
