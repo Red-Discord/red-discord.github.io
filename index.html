@@ -16,7 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X3WBMMBG1L');
 </script>
     
@@ -37,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .card {
       background: rgba(20, 22, 30, 0.9);
-      padding: 25px;
+      padding: 30px;
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 0 30px rgba(0,0,0,0.6);
@@ -61,16 +60,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     h1 {
       margin: 10px 0 5px;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     p {
       font-size: 14px;
       color: #aaa;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    /* BOTÓN NUEVO */
+    /* BOTÓN GITHUB */
     .github-btn {
       display: inline-block;
       background: linear-gradient(135deg, #6e7bff, #5865F2);
@@ -80,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-decoration: none;
       font-size: 15px;
       font-weight: bold;
-      margin: 15px 0;
+      margin: 10px 0;
       transition: 0.25s;
       box-shadow: 0 0 15px rgba(88,101,242,0.4);
     }
@@ -88,7 +87,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .github-btn:hover {
       transform: scale(1.07);
       box-shadow: 0 0 25px rgba(88,101,242,0.8);
-      background: linear-gradient(135deg, #5865F2, #4752c4);
+    }
+
+    /* BOTÓN BUY ME A COFFEE - Más bonito */
+    .bmc-btn {
+      display: inline-block;
+      margin: 15px 0 10px 0;
+      transition: all 0.3s ease;
+    }
+
+    .bmc-btn:hover {
+      transform: scale(1.08) translateY(-2px);
+      filter: brightness(1.15);
     }
 
     /* IMAGEN PREVIEW */
@@ -109,15 +119,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
     
-hr.hr-17 {
-  border: 0;
-  height: 0;
-  box-shadow: 0 0 10px 1px #00000000;
-}
+    hr.hr-17 {
+      border: 0;
+      height: 0;
+      box-shadow: 0 0 10px 1px #00000000;
+      margin: 20px 0;
+    }
 
-hr.hr-17:after {
-  content: "\00a0";
-}
+    hr.hr-17:after {
+      content: "\00a0";
+    }
     
   </style>
 </head>
@@ -127,7 +138,7 @@ hr.hr-17:after {
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3NNQH43"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager -->
   
   <div class="card">
 
@@ -143,19 +154,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- IMAGEN DEL PROYECTO -->
     <img class="preview-img" src="https://opengraph.githubassets.com/1/keyboard-sounds/keyboardsounds-pro" alt="Keyboard Sounds Preview">
 
-    <!-- BOTÓN A GITHUB -->
+    <!-- BOTÓN GITHUB -->
     <a class="github-btn" href="https://github.com/keyboard-sounds/keyboardsounds-pro" target="_blank">
       Ver proyecto en GitHub
     </a>
 
+    <!-- BOTÓN BUY ME A COFFEE -->
+    <a href="https://buymeacoffee.com/m.a.c" target="_blank" class="bmc-btn">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+           alt="Buy Me A Coffee" 
+           width="200" 
+           height="50">
+    </a>
+
     <hr class="hr-17">
     
-    <!-- WIDGET -->
-    <iframe src="https://discord.com/widget?id=1480226424198533327&amp;theme=dark" width="350" height="350" allowtransparency="true" frameborder="0">
+    <!-- WIDGET DISCORD -->
+    <iframe src="https://discord.com/widget?id=1480226424198533327&amp;theme=dark" 
+            width="350" 
+            height="350" 
+            allowtransparency="true" 
+            frameborder="0">
     </iframe>
 
   </div>
 
-
-
-</body></html>
+</body>
+</html>
