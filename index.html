@@ -477,9 +477,21 @@
             <div class="lg:col-span-5">
                 <h2 class="title-font text-6xl">Únete a la comunidad</h2>
                 <p class="text-xl text-white/70 mt-8">Eventos, soporte . . .</p>
-                <a href="https://discord.com/invite/VCX8qkV3" target="_blank" class="mt-10 inline-flex items-center gap-4 text-2xl font-bold bg-[#5865f2] px-12 py-6 rounded-3xl">
-                    <i class="fab fa-discord text-4xl"></i> ENTRAR AL DISCORD
-                </a>
+<a 
+    href="https://discord.com/invite/VCX8qkV3" 
+    target="_blank"
+    class="mt-10 group inline-flex items-center justify-center gap-4 
+           bg-[#5865F2] hover:bg-[#4752C4] 
+           text-white text-2xl font-bold 
+           px-10 py-6 rounded-3xl 
+           transition-all duration-300 
+           hover:scale-105 active:scale-95 
+           shadow-lg hover:shadow-2xl hover:shadow-[#5865F2]/50
+           focus:outline-none focus:ring-4 focus:ring-[#5865F2]/50">
+    
+    <i class="fab fa-discord text-4xl transition-transform duration-300 group-hover:rotate-[20deg]"></i>
+    <span>ENTRAR AL DISCORD</span>
+</a>
             </div>
             <div class="lg:col-span-7 glass rounded-3xl p-6">
                 <iframe src="https://discord.com/widget?id=1480226424198533327&amp;theme=dark" width="100%" height="440" allowtransparency="true" frameborder="0" class="rounded-3xl"></iframe>
@@ -487,17 +499,46 @@
         </div>
     </section>
 
-    <!-- BUY ME A COFFEE -->
-    <div class="max-w-screen-2xl mx-auto px-8 py-16 text-center">
-        <a href="https://buymeacoffee.com/m.a.c" target="_blank" class="inline-flex items-center gap-4 text-3xl font-bold px-14 py-8 rounded-3xl bg-gradient-to-r from-yellow-300 to-amber-300 text-black hover:scale-110">
-            <i class="fas fa-coffee text-4xl"></i> Apoyar el servidor • Buy Me a Coffee
-        </a>
-    </div>
-
     <!-- FOOTER -->
     <footer class="bg-black py-16 border-t border-white/10">
         <div class="max-w-screen-2xl mx-auto px-8 text-center text-white/50">
-            <span class="text-[#fe2858]">Los anuncios y donaciones ayudan a mantener el servidor.</span>
+<a href="https://buymeacoffee.com/m.a.c" target="_blank" class="group relative inline-flex items-center justify-center gap-5 
+           bg-gradient-to-br from-yellow-300 via-amber-300 to-orange-400 
+           hover:from-yellow-200 hover:via-amber-200 hover:to-orange-300
+           text-black text-3xl font-black tracking-widest
+           px-16 py-10 rounded-3xl 
+           transition-all duration-300 
+           hover:scale-110 active:scale-95 
+           shadow-[0_0_30px_-5px] shadow-amber-500/70 hover:shadow-[0_0_60px_10px] hover:shadow-amber-500/80
+           focus:outline-none focus:ring-4 focus:ring-amber-400/80
+           overflow-hidden">
+
+    <!-- Brillo animado principal -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -skew-x-12 
+                translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-700"></div>
+
+    <!-- Brillo secundario más lento -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 
+                translate-x-[-200%] group-hover:translate-x-[300%] transition-transform duration-1000 delay-150"></div>
+
+    <!-- Glow orb -->
+    <div class="absolute -inset-1 bg-gradient-to-br from-amber-400 to-yellow-400 rounded-3xl opacity-30 blur-xl 
+                group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
+
+    <!-- Icono con animación divertida -->
+    <i class="fas fa-coffee text-5xl transition-all duration-500 
+              group-hover:scale-150 group-hover:-rotate-12 group-hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)]
+              relative z-10"></i>
+
+    <!-- Texto -->
+    <span class="relative z-10 drop-shadow-sm">Cómpranos un café</span>
+
+    <!-- Partículas / brillitos flotantes -->
+    <div class="absolute top-3 right-6 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-80 animate-ping"></div>
+    <div class="absolute top-8 right-12 w-1.5 h-1.5 bg-white rounded-full opacity-0 group-hover:opacity-70 animate-ping delay-300"></div>
+    <div class="absolute bottom-6 left-8 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-60 animate-ping delay-700"></div>
+
+</a>
         </div>
     </footer>
 
