@@ -906,13 +906,6 @@
             modal.classList.add('hidden');
         }
 
-        function updateLiveStats() {
-            document.getElementById('players-hero').textContent = SERVER_CONFIG.playersOnline;
-            document.getElementById('progress-hero').textContent = SERVER_CONFIG.worldProgress + '%';
-            if (document.getElementById('live-players-nav')) {
-                document.getElementById('live-players-nav').textContent = SERVER_CONFIG.playersOnline;
-            }
-        }
 
         window.onload = function() {
             updateLiveStats();
