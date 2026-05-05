@@ -111,9 +111,15 @@
                                         font-family: 'Space Grotesk', sans-serif;
                               }
 
-                              .hero-bg {
-                                        background: linear-gradient(90deg, rgba(10, 12, 18, 0.92) 0%, rgba(15, 17, 23, 0.88) 100%),
-                                                  url('https://i.ibb.co/9934g8V6/mc-wallpaper-movie-vista-2560x1440.png') center/cover no-repeat fixed;
+.hero-bg {
+    background: 
+        linear-gradient(90deg, rgba(10, 12, 18, 0.92) 0%, rgba(15, 17, 23, 0.88) 100%),
+        url('mc_wallpaper_movie_vista_2560x1440.png') center/cover no-repeat fixed;
+    
+    /* Opcional pero recomendado */
+    background-color: #0a0c12; /* color de respaldo por si la imagen no carga */
+    min-height: 100vh;         /* si es un hero full screen */
+}
                               }
 
                               .neon-text {
