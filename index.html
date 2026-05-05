@@ -881,7 +881,7 @@
         function copyIP() {
             navigator.clipboard.writeText(SERVER_CONFIG.ip).then(() => {
                 const toast = document.getElementById('toast');
-                document.getElementById('toast-text').textContent = '¡IP copiada! Pégala en Multijugador';
+                document.getElementById('toast-text').textContent = '¡IP copiada!';
                 toast.style.display = 'flex';
                 setTimeout(() => { toast.style.display = 'none'; }, 3000);
             });
