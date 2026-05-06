@@ -6178,37 +6178,56 @@
            hover:[text-shadow:0_0_30px_#00f0ff,0_0_60px_#00f0ff,0_0_90px_#00f0ff]
            transition-all duration-500"> SURVIVAL </h1>
                                                   <p class="text-2xl text-white/80 max-w-lg">Comunidad pequeña, amistades grandes.</p>
-                                                  <div class="flex flex-col sm:flex-row gap-4">
-                                                            <button onclick="copyIP()" id="copyBtn" class="group relative flex-1 py-8 px-10 text-2xl font-bold
-               bg-gradient-to-br from-zinc-950 to-black 
+<div class="flex flex-col sm:flex-row gap-4">
+    <!-- Botón IP (sin cambios) -->
+    <button onclick="copyIP()" id="copyBtn" class="group relative flex-1 py-8 px-10 text-2xl font-bold
+               bg-gradient-to-br from-zinc-950 to-black
                border-2 border-[#00f0ff]/30 hover:border-[#00f0ff]
                text-white rounded-3xl flex items-center justify-center gap-5
                shadow-xl shadow-[#00f0ff]/20 hover:shadow-2xl hover:shadow-[#00f0ff]/50
                transition-all duration-300 hover:scale-[1.03] active:scale-95">
-                                                                      <i id="icon" class="fas fa-copy text-3xl transition-all group-hover:rotate-12"></i>
-                                                                      <div class="text-left">
-                                                                                <span class="block text-xs text-[#00f0ff]/70 tracking-[2px] font-medium">IP DEL SERVIDOR</span>
-                                                                                <span id="text" class="font-mono tracking-[3px] text-xl">fortressmc.axenthost.me</span>
-                                                                      </div>
-                                                                      <!-- Mensaje COPIADO (mejorado y sin parpadeo) -->
-                                                                      <span id="copied" class="ml-auto flex items-center gap-2 text-emerald-400 font-medium text-sm 
-                 opacity-0 scale-75 transition-all duration-300">
-                                                                                <i class="fas fa-check"></i> COPIADO </span>
-                                                            </button>
-                                                            <a href="https://buymeacoffee.com/m.a.c/modpack" target="_blank" class="group flex-1 flex items-center justify-center gap-4 py-8 px-10 
-          bg-gradient-to-r from-red-600 to-rose-600 
+        <i id="icon" class="fas fa-copy text-3xl transition-all group-hover:rotate-12"></i>
+        <div class="text-left">
+            <span class="block text-xs text-[#00f0ff]/70 tracking-[2px] font-medium">IP DEL SERVIDOR</span>
+            <span id="text" class="font-mono tracking-[3px] text-xl">fortressmc.axenthost.me</span>
+        </div>
+        <span id="copied" class="ml-auto flex items-center gap-2 text-emerald-400 font-medium text-sm opacity-0 scale-75 transition-all duration-300">
+            <i class="fas fa-check"></i> COPIADO 
+        </span>
+    </button>
+
+    <!-- NUEVO: Botón PUERTO 50561 -->
+    <button onclick="copyPort()" id="copyPortBtn" class="group relative flex-1 py-8 px-10 text-2xl font-bold
+               bg-gradient-to-br from-zinc-950 to-black
+               border-2 border-[#00f0ff]/30 hover:border-[#00f0ff]
+               text-white rounded-3xl flex items-center justify-center gap-5
+               shadow-xl shadow-[#00f0ff]/20 hover:shadow-2xl hover:shadow-[#00f0ff]/50
+               transition-all duration-300 hover:scale-[1.03] active:scale-95">
+        <i id="portIcon" class="fas fa-copy text-3xl transition-all group-hover:rotate-12"></i>
+        <div class="text-left">
+            <span class="block text-xs text-[#00f0ff]/70 tracking-[2px] font-medium">PUERTO DEL SERVIDOR</span>
+            <span id="portText" class="font-mono tracking-[3px] text-xl">50561</span>
+        </div>
+        <span id="portCopied" class="ml-auto flex items-center gap-2 text-emerald-400 font-medium text-sm opacity-0 scale-75 transition-all duration-300">
+            <i class="fas fa-check"></i> COPIADO 
+        </span>
+    </button>
+
+    <!-- Botón MODPACK (sin cambios) -->
+    <a href="https://buymeacoffee.com/m.a.c/modpack" target="_blank" class="group flex-1 flex items-center justify-center gap-4 py-8 px-10
+          bg-gradient-to-r from-red-600 to-rose-600
           hover:from-red-500 hover:to-rose-500
-          text-white text-2xl font-bold 
+          text-white text-2xl font-bold
           rounded-3xl border-2 border-white/30 hover:border-white/60
           shadow-xl shadow-red-500/30 hover:shadow-2xl hover:shadow-red-500/40
           transition-all duration-300 hover:scale-105 active:scale-95">
-                                                                      <i class="fas fa-download text-3xl transition-transform group-hover:-translate-y-1"></i>
-                                                                      <div class="flex flex-col items-center leading-none">
-                                                                                <span class="text-xl tracking-wider"></span>
-                                                                                <span class="text-3xl">MODPACK</span>
-                                                                      </div>
-                                                            </a>
-                                                  </div>
+        <i class="fas fa-download text-3xl transition-transform group-hover:-translate-y-1"></i>
+        <div class="flex flex-col items-center leading-none">
+            <span class="text-xl tracking-wider"></span>
+            <span class="text-3xl">MODPACK</span>
+        </div>
+    </a>
+</div>
                                                   <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10">
                                                             <!-- Huecos Disponibles -->
                                                             <div class="flex flex-col items-center group">
@@ -6868,7 +6887,25 @@
                                         updateLiveStats();
                                         console.log('%c✅ MAC SURVIVAL - Web cargada correctamente', 'color:#fe2858; font-size:16px; font-weight:900');
                               };
+
+						
                     </script>
+			  <script>
+    // Función para copiar el puerto 50561
+    function copyPort() {
+        navigator.clipboard.writeText("50561").then(() => {
+            const copiedEl = document.getElementById("portCopied");
+            copiedEl.classList.remove("opacity-0", "scale-75");
+            copiedEl.classList.add("opacity-100", "scale-100");
+
+            setTimeout(() => {
+                copiedEl.classList.add("opacity-0", "scale-75");
+                copiedEl.classList.remove("opacity-100", "scale-100");
+            }, 2200);
+        });
+    }
+</script>
                     <iframe id="google_esf" name="google_esf" src="https://pagead2.googlesyndication.com/pagead/html/r20260501/r20190131/zrt_lookup_fy2021.html" style="display: none;"></iframe>
-          </body>
+          
+		  </body>
 </html>
