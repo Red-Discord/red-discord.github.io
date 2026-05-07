@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web de MAC</title>
+    <title>MAC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -22,142 +22,39 @@
     <div class="max-w-6xl w-full">
         <!-- Header -->
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-bold mb-3 tracking-tight">¡Hola! Soy MAC, esta es mi web :)</h1>
-            <p class="text-2xl text-zinc-400">¿A dónde quieres ir?</p>
+            <h1 class="text-5xl font-bold mb-3 tracking-tight" lang="es">¡Hola! Soy MAC 👋</h1>
+            <h1 class="text-5xl font-bold mb-3 tracking-tight" lang="en" hidden>Hey! I'm MAC 👋</h1>
+            <p class="text-2xl text-zinc-400">Elige tu idioma / Choose your language</p>
         </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-            <!-- 1. Podcast -->
-            <a href="https://open.spotify.com/show/4HtvdrTSdiWaaEbKryCHFe?si=56e0d4a75bf14585" target="_blank"
-               class="card-hover group bg-zinc-900 border border-violet-500/30 hover:border-violet-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-500/20 transition-colors">
-                    <i class="fa-solid fa-podcast text-6xl text-violet-500"></i>
+        <!-- Language Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <!-- Español -->
+            <a href="es/" 
+               class="card-hover group bg-zinc-900 border border-violet-500/30 hover:border-violet-500 rounded-3xl p-10 flex flex-col items-center text-center">
+                <div class="w-28 h-28 bg-violet-500/10 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-violet-500/20 transition-colors">
+                    <span class="text-7xl">🇪🇸</span>
                 </div>
-                <h2 class="text-3xl font-semibold mb-2">Podcast</h2>
-                <p class="text-zinc-400 mb-8">Escucha todos los episodios</p>
-                <span class="inline-flex items-center px-8 py-4 bg-violet-500 hover:bg-violet-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Ir al Podcast <i class="fa-solid fa-arrow-right ml-3"></i>
+                <h2 class="text-4xl font-semibold mb-2">Español</h2>
+                <p class="text-zinc-400 mb-10 text-xl">Cambiar a Español</p>
+                <span class="inline-flex items-center px-10 py-5 bg-violet-500 hover:bg-violet-600 text-black font-semibold rounded-2xl text-2xl transition-colors">
+                    Ir al sitio <i class="fa-solid fa-arrow-right ml-4"></i>
                 </span>
             </a>
 
-
-            <!-- 2. Spotify -->
-            <a href="https://open.spotify.com/user/11164568531" target="_blank"
-               class="card-hover group bg-zinc-900 border border-emerald-500/30 hover:border-emerald-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
-                    <i class="fa-brands fa-spotify text-6xl text-emerald-500"></i>
+            <!-- English -->
+            <a href="en/" 
+               class="card-hover group bg-zinc-900 border border-emerald-500/30 hover:border-emerald-500 rounded-3xl p-10 flex flex-col items-center text-center">
+                <div class="w-28 h-28 bg-emerald-500/10 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-emerald-500/20 transition-colors">
+                    <span class="text-7xl">🇬🇧</span>
                 </div>
-                <h2 class="text-3xl font-semibold mb-2">Spotify</h2>
-                <p class="text-zinc-400 mb-8">Escucha mis playlists y música</p>
-                <span class="inline-flex items-center px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Abrir Spotify <i class="fa-solid fa-arrow-right ml-3"></i>
+                <h2 class="text-4xl font-semibold mb-2">English</h2>
+                <p class="text-zinc-400 mb-10 text-xl">Switch to English</p>
+                <span class="inline-flex items-center px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl text-2xl transition-colors">
+                    Go to site <i class="fa-solid fa-arrow-right ml-4"></i>
                 </span>
             </a>
-            
-            <!-- 3. TikTok -->
-            <a href="https://www.tiktok.com/@_____mac____" target="_blank"
-               class="card-hover group bg-zinc-900 border border-rose-500/30 hover:border-rose-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-500/20 transition-colors">
-                    <i class="fa-brands fa-tiktok text-6xl text-rose-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">TikTok</h2>
-                <p class="text-zinc-400 mb-8">Sígueme en TikTok</p>
-                <span class="inline-flex items-center px-8 py-4 bg-rose-500 hover:bg-rose-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Ver perfil <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
-            <!-- 4. Mi Servidor de Discord -->
-            <a href="https://discord.com/invite/RVksCJjC9D" target="_blank"
-               class="card-hover group bg-zinc-900 border border-indigo-500/30 hover:border-indigo-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
-                    <i class="fa-brands fa-discord text-6xl text-indigo-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">Servidor de Discord</h2>
-                <p class="text-zinc-400 mb-8">Únete a la comunidad</p>
-                <span class="inline-flex items-center px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Entrar al Discord <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
-            <!-- 5. Servidor de Minecraft -->
-            <a href="https://servidormac.github.io/" target="_blank"
-               class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
-                    <i class="fa-solid fa-cube text-6xl text-green-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">Servidor de Minecraft</h2>
-                <p class="text-zinc-400 mb-8">Únete al servidor, el mejor survival ;p</p>
-                <span class="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Ir al servidor <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
-            <!-- 6. Cómprame un Café -->
-            <a href="https://buymeacoffee.com/m.a.c" target="_blank"
-               class="card-hover group bg-zinc-900 border border-amber-500/30 hover:border-amber-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
-                    <i class="fa-solid fa-mug-hot text-6xl text-amber-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">Cómpranos un café</h2>
-                <p class="text-zinc-400 mb-8">Apoya el proyecto y ayuda a mantener el servidor</p>
-                <span class="inline-flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Apoyar <i class="fa-solid fa-heart ml-3"></i>
-                </span>
-            </a>
-             <!-- 7. WhatsApp 1 -->
-            <a href="https://wa.me/34653600924" target="_blank"
-               class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-6xl text-green-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">WhatsApp 1</h2>
-                <p class="text-zinc-400 mb-8">Contacta directamente por WhatsApp</p>
-                <span class="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Abrir chat <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
-            <!-- 8. WhatsApp 2 -->
-            <a href="https://wa.me/353871049021" target="_blank"
-               class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-6xl text-green-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">WhatsApp 2</h2>
-                <p class="text-zinc-400 mb-8">Contacta directamente por WhatsApp</p>
-                <span class="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Abrir chat <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
-            <!-- 9. WhatsApp 3 -->
-            <a href="https://wa.me/34604234157" target="_blank"
-               class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-6xl text-green-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">WhatsApp 3</h2>
-                <p class="text-zinc-400 mb-8">Contacta directamente por WhatsApp</p>
-                <span class="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Abrir chat <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-
         </div>
-
-        <!-- Footer
-
-
-                <div class="text-center mt-16 text-zinc-500 text-sm">
-            MAC Network • Hecho con ❤️ para la comunidad
-        </div>
-        
-        -->
-
     </div>
 </body>
 </html>
