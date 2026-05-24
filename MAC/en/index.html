@@ -25,21 +25,46 @@
             <h1 class="text-5xl font-bold mb-3 tracking-tight">Hi! I'm MAC, this is my website :)</h1>
             <p class="text-2xl text-zinc-400">Where do you want to go?</p>
         </div>
+
+        <!-- Smartlinks / Latest Releases -->
+        <section class="mb-12">
+            <div class="flex items-center justify-center gap-3 mb-6 text-center">
+                <i class="fa-solid fa-music text-fuchsia-400 text-2xl"></i>
+                <h2 class="text-3xl font-bold tracking-tight">Latest releases</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://ditto.fm/quiero-repetir-mac" target="_blank" rel="noopener noreferrer"
+                   class="card-hover group bg-gradient-to-br from-fuchsia-500/20 via-zinc-900 to-rose-500/10 border border-fuchsia-500/40 hover:border-fuchsia-400 rounded-3xl p-8 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-fuchsia-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-fuchsia-500/20 transition-colors">
+                        <i class="fa-solid fa-compact-disc text-5xl text-fuchsia-400"></i>
+                    </div>
+                    <p class="text-sm uppercase tracking-[0.25em] text-fuchsia-300 mb-3">Smartlink</p>
+                    <h2 class="text-4xl font-bold mb-3">Quiero Repetir</h2>
+                    <p class="text-zinc-400 mb-8">Listen on your favorite platform</p>
+                    <span class="inline-flex items-center px-8 py-4 bg-fuchsia-500 hover:bg-fuchsia-600 text-black font-semibold rounded-2xl text-xl transition-colors">
+                        Listen now <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </span>
+                </a>
+
+                <a href="https://ditto.fm/todo-o-nada-mac" target="_blank" rel="noopener noreferrer"
+                   class="card-hover group bg-gradient-to-br from-cyan-500/20 via-zinc-900 to-blue-500/10 border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-8 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
+                        <i class="fa-solid fa-headphones text-5xl text-cyan-400"></i>
+                    </div>
+                    <p class="text-sm uppercase tracking-[0.25em] text-cyan-300 mb-3">Smartlink</p>
+                    <h2 class="text-4xl font-bold mb-3">Todo o Nada</h2>
+                    <p class="text-zinc-400 mb-8">Listen on your favorite platform</p>
+                    <span class="inline-flex items-center px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-black font-semibold rounded-2xl text-xl transition-colors">
+                        Listen now <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
         <!-- Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- 1. Podcast -->
-            <a href="https://open.spotify.com/show/4HtvdrTSdiWaaEbKryCHFe?si=56e0d4a75bf14585" target="_blank"
-               class="card-hover group bg-zinc-900 border border-violet-500/30 hover:border-violet-500 rounded-3xl p-8 flex flex-col items-center text-center">
-                <div class="w-24 h-24 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-500/20 transition-colors">
-                    <i class="fa-solid fa-podcast text-6xl text-violet-500"></i>
-                </div>
-                <h2 class="text-3xl font-semibold mb-2">Podcast</h2>
-                <p class="text-zinc-400 mb-8">Listen to all the episodes</p>
-                <span class="inline-flex items-center px-8 py-4 bg-violet-500 hover:bg-violet-600 text-black font-semibold rounded-2xl text-xl transition-colors">
-                    Go to Podcast <i class="fa-solid fa-arrow-right ml-3"></i>
-                </span>
-            </a>
-            <!-- 2. Spotify -->
+            <!-- 1. Spotify -->
             <a href="https://open.spotify.com/user/11164568531" target="_blank"
                class="card-hover group bg-zinc-900 border border-emerald-500/30 hover:border-emerald-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
@@ -52,7 +77,7 @@
                 </span>
             </a>
            
-            <!-- 3. TikTok -->
+            <!-- 2. TikTok -->
             <a href="https://www.tiktok.com/@_____mac____" target="_blank"
                class="card-hover group bg-zinc-900 border border-rose-500/30 hover:border-rose-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-500/20 transition-colors">
@@ -64,7 +89,7 @@
                     View Profile <i class="fa-solid fa-arrow-right ml-3"></i>
                 </span>
             </a>
-            <!-- 4. My Discord Server -->
+            <!-- 3. My Discord Server -->
             <a href="https://discord.com/invite/RVksCJjC9D" target="_blank"
                class="card-hover group bg-zinc-900 border border-indigo-500/30 hover:border-indigo-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
@@ -76,7 +101,7 @@
                     Join Discord <i class="fa-solid fa-arrow-right ml-3"></i>
                 </span>
             </a>
-            <!-- 5. Office -->
+            <!-- 4. Office -->
 <a href="tel:+34872268703" class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center" aria-label="Call the office phone number">
     
     <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
@@ -98,7 +123,7 @@
     </p>
 </a>
 
-<!-- 6. Buy Me a Coffee -->
+<!-- 5. Buy Me a Coffee -->
 <a href="https://buymeacoffee.com/m.a.c" target="_blank"
    class="card-hover group bg-zinc-900 border border-amber-500/30 hover:border-amber-500 rounded-3xl p-8 flex flex-col items-center text-center">
     <div class="w-24 h-24 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
@@ -110,7 +135,7 @@
         Support <i class="fa-solid fa-heart ml-3"></i>
     </span>
 </a>
-             <!-- 7. WhatsApp 1 -->
+             <!-- 6. WhatsApp 1 -->
             <a href="https://wa.me/34653600924" target="_blank"
                class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
@@ -122,7 +147,7 @@
                     Open Chat <i class="fa-solid fa-arrow-right ml-3"></i>
                 </span>
             </a>
-            <!-- 8. WhatsApp 2 -->
+            <!-- 7. WhatsApp 2 -->
             <a href="https://wa.me/353871049021" target="_blank"
                class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
@@ -134,7 +159,7 @@
                     Open Chat <i class="fa-solid fa-arrow-right ml-3"></i>
                 </span>
             </a>
-            <!-- 9. WhatsApp 3 -->
+            <!-- 8. WhatsApp 3 -->
             <a href="https://wa.me/34604234157" target="_blank"
                class="card-hover group bg-zinc-900 border border-green-500/30 hover:border-green-500 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-24 h-24 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
